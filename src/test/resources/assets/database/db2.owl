@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xml:base="http://example.org/myOntology">
+    <owl:Ontology rdf:about="http://example.org/myOntology"/>
+
+    <!--Consept Inclusion-->
+    <owl:Class rdf:ID="Mortals">
+
+    </owl:Class>
+    <owl:Class rdf:ID="Men">
+        <rdfs:subClassOf rdf:resource="#Mortals"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Hobbits">
+        <rdfs:subClassOf rdf:resource="#Mortals"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Dwarves">
+        <rdfs:subClassOf rdf:resource="#Mortals"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Orcs">
+        <rdfs:subClassOf rdf:resource="#Mortals"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Uruk-hai">
+        <rdfs:subClassOf rdf:resource="#Orcs"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Immortals">
+
+    </owl:Class>
+    <owl:Class rdf:ID="Elves">
+        <rdfs:subClassOf rdf:resource="#Immortals"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Light_Elves">
+        <rdfs:subClassOf rdf:resource="#Elves"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Dark_Elves">
+        <rdfs:subClassOf rdf:resource="#Elves"/>
+    </owl:Class>
+
+
+    <!--Role inclusions-->
+    <owl:ObjectProperty rdf:about="#inhabitatedBy">
+        <rdfs:subPropertyOf rdf:resource="#bredIn"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#bredIn"/>
+    <owl:ObjectProperty rdf:about="#rivalryWith"/>
+    <owl:ObjectProperty rdf:about="#lifespan"/>
+    <owl:ObjectProperty rdf:about="#hasName"/>
+
+    <!--Existential Quantification-->
+    <owl:Class rdf:ID="Shire">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:allValuesFrom rdf:resource="#Hobbits"/>
+                <owl:onProperty>
+                    <owl:FunctionalProperty rdf:about="#inhabitatedBy"/>
+                </owl:onProperty>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+    <owl:Class rdf:ID="Gondor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:allValuesFrom rdf:resource="#Men"/>
+                <owl:onProperty>
+                    <owl:FunctionalProperty rdf:about="#inhabitatedBy"/>
+                </owl:onProperty>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+    <owl:Class rdf:ID="Mordor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:allValuesFrom rdf:resource="#Orcs"/>
+                <owl:onProperty>
+                    <owl:FunctionalProperty rdf:about="#inhabitatedBy"/>
+                </owl:onProperty>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+    <owl:Class rdf:ID="Isengard">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:allValuesFrom rdf:resource="#Gondor"/>
+                <owl:onProperty>
+                    <owl:FunctionalProperty rdf:about="#inhabitatedBy"/>
+                </owl:onProperty>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+    <owl:Class rdf:ID="Settlement">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:onProperty>
+                    <owl:FunctionalProperty rdf:about="#inhabitatedBy"/>
+                </owl:onProperty>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+</rdf:RDF>

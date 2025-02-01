@@ -1,0 +1,816 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/myOntology#"
+     xml:base="http://example.org/myOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/myOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/myOntology#bredIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/myOntology#bredIn"/>
+    
+
+
+    <!-- http://example.org/myOntology#hasName -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/myOntology#hasName"/>
+    
+
+
+    <!-- http://example.org/myOntology#inhabitatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/myOntology#inhabitatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://example.org/myOntology#bredIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/myOntology#lifespan -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/myOntology#lifespan"/>
+    
+
+
+    <!-- http://example.org/myOntology#rivalryWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/myOntology#rivalryWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/myOntology#Aragon -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Aragon"/>
+    
+
+
+    <!-- http://example.org/myOntology#Aragorn -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Aragorn">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#lifespan"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">210</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Azog -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Azog">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#lifespan"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">80</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Bilbo -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Bilbo"/>
+    
+
+
+    <!-- http://example.org/myOntology#Bolg -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Bolg"/>
+    
+
+
+    <!-- http://example.org/myOntology#Boromir -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Boromir"/>
+    
+
+
+    <!-- http://example.org/myOntology#Dark_Elves -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Dark_Elves">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Legolas"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Thranduil"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.org/myOntology#Elves"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Dwarves -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Dwarves">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#rivalryWith"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Orcs"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Balin"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Celeborn"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Dwalvin"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Gimli"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Oin"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Thiorin"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.org/myOntology#Mortals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Elves -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Elves">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#rivalryWith"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Orcs"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.org/myOntology#Immortals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Eomer -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Eomer"/>
+    
+
+
+    <!-- http://example.org/myOntology#Faramir -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Faramir"/>
+    
+
+
+    <!-- http://example.org/myOntology#Frodo -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Frodo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#lifespan"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Gimli -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Gimli">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#lifespan"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">250</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Gondor -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Gondor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Aragon"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Boromir"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Eomer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Faramir"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Theoden"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#rivalryWith"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Mordor"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/myOntology#Men"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Gothmog -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Gothmog"/>
+    
+
+
+    <!-- http://example.org/myOntology#Hobbits -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Hobbits">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Bilbo"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Frodo"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Gimli"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Merry"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Pippin"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.org/myOntology#Mortals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Immortals -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Immortals"/>
+    
+
+
+    <!-- http://example.org/myOntology#Isengard -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Isengard">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#bredIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Lurtz"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#bredIn"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Ugluk"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Lurtz"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Ugluk"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/myOntology#Gondor"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Light_Elves -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Light_Elves">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Elrond"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Galadriel"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.org/myOntology#Elves"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Lurtz -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Lurtz"/>
+    
+
+
+    <!-- http://example.org/myOntology#Men -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Men">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#rivalryWith"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Orcs"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Beren"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Hador"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.org/myOntology#Mortals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Merry -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Merry"/>
+    
+
+
+    <!-- http://example.org/myOntology#Mordor -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Mordor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Azog"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Bolg"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Gothmog"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Lurtz"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Ugluk"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/myOntology#Orcs"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Mortals -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Mortals"/>
+    
+
+
+    <!-- http://example.org/myOntology#Orcs -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Orcs">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Azog"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Bolg"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Gothmog"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.org/myOntology#Mortals"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Pippin -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Pippin"/>
+    
+
+
+    <!-- http://example.org/myOntology#Sam -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Sam"/>
+    
+
+
+    <!-- http://example.org/myOntology#Settlement -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Settlement">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Shire -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Shire">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Bilbo"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Frodo"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Merry"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Pippin"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Sam"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#rivalryWith"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/myOntology#Isengard"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#inhabitatedBy"/>
+                <owl:allValuesFrom rdf:resource="http://example.org/myOntology#Hobbits"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/myOntology#Theoden -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Theoden"/>
+    
+
+
+    <!-- http://example.org/myOntology#Ugluk -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Ugluk"/>
+    
+
+
+    <!-- http://example.org/myOntology#Uruk-hai -->
+
+
+    <owl:Class rdf:about="http://example.org/myOntology#Uruk-hai">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Lurtz"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/myOntology#hasName"/>
+                <owl:hasValue rdf:resource="http://example.org/myOntology#Ugluk"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://example.org/myOntology#Orcs"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/myOntology#Azog -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Azog"/>
+    
+
+
+    <!-- http://example.org/myOntology#Balin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Balin"/>
+    
+
+
+    <!-- http://example.org/myOntology#Beren -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Beren"/>
+    
+
+
+    <!-- http://example.org/myOntology#Bilbo -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Bilbo"/>
+    
+
+
+    <!-- http://example.org/myOntology#Bolg -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Bolg"/>
+    
+
+
+    <!-- http://example.org/myOntology#Celeborn -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Celeborn"/>
+    
+
+
+    <!-- http://example.org/myOntology#Dwalvin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Dwalvin"/>
+    
+
+
+    <!-- http://example.org/myOntology#Elrond -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Elrond"/>
+    
+
+
+    <!-- http://example.org/myOntology#Frodo -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Frodo"/>
+    
+
+
+    <!-- http://example.org/myOntology#Galadriel -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Galadriel"/>
+    
+
+
+    <!-- http://example.org/myOntology#Gimli -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Gimli"/>
+    
+
+
+    <!-- http://example.org/myOntology#Gothmog -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Gothmog"/>
+    
+
+
+    <!-- http://example.org/myOntology#Hador -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Hador"/>
+    
+
+
+    <!-- http://example.org/myOntology#Legolas -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Legolas"/>
+    
+
+
+    <!-- http://example.org/myOntology#Lurtz -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Lurtz"/>
+    
+
+
+    <!-- http://example.org/myOntology#Merry -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Merry"/>
+    
+
+
+    <!-- http://example.org/myOntology#Oin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Oin"/>
+    
+
+
+    <!-- http://example.org/myOntology#Pippin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Pippin"/>
+    
+
+
+    <!-- http://example.org/myOntology#Thiorin -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Thiorin"/>
+    
+
+
+    <!-- http://example.org/myOntology#Thranduil -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Thranduil"/>
+    
+
+
+    <!-- http://example.org/myOntology#Ugluk -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.org/myOntology#Ugluk"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+
